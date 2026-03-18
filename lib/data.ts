@@ -1,43 +1,23 @@
 export const historyData = [
   {
     id: 1,
-    text: "I nonni abitanti a Mongardino da sempre facevano i contadini e lavoravano le vigne in piccoli appezzamenti sparsi intorno alla frazione, in regime di mezzadria. Nella foto il nonno Savino in divisa da “guerra”.",
+    text: "Tutto ha inizio dalle radici contadine dei nonni, che per una vita intera hanno lavorato le vigne di Mongardino in piccoli appezzamenti sparsi, spinti da un instancabile amore per la terra.",
     image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop", 
     alt: "Nonno Savino e la vigna",
   },
   {
     id: 2,
-    text: "Nel 1968 i nonni hanno avuto la possibilità di acquistare le vigne sul bricco “Montarello”, spartiacque tra Isola e Mongardino, in posizione stupenda per il turista, che gode di un paesaggio incantevole sulle colline astigiane contornate dalla corona di montagne piemontesi dal Monviso alla montagne piemontesi, fino alla catena del Rosa.",
-    image: "https://images.unsplash.com/photo-1623861546738-9cb5232cd586?q=80&w=2070&auto=format&fit=crop", 
+    text: "Nel 1968, il sogno prende forma. I nonni acquistano le vigne sul bricco “Montarello”, una gemma collinare esposta a mezzogiorno, che regala viste mozzafiato dall'appennino astigiano fino alla maestosa catena del Monte Rosa.",
+    image: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?q=80&w=2070&auto=format&fit=crop", 
     alt: "Panorama Bricco Montarello",
   },
   {
     id: 3,
-    text: "L’acquisto di 10 giornate piemontesi di vigna è costato il sacrificio di tutti i risparmi e l’indebitamento della famiglia e poteva avvenire solo per effetto dell’abbandono delle terre delle famiglie che si trasferivano attratte a Torino dal lavoro in fabbrica e dal richiamo della FIAT.",
+    text: "L'acquisto di 10 giornate piemontesi richiama enormi sacrifici, diventando il simbolo della dedizione della famiglia. Con pazienza e ore inesauribili di lavoro, l'azienda prospera e passa nelle mani del figlio Giuseppe, che negli anni '80 espande la tenuta a 30 giornate e rinnova la cantina.",
   },
   {
     id: 4,
-    text: "I nonni appassionati per la campagna, cultori della vigna e del vino, potevano finalmente lavorare per la famiglia e mettere ancora più impegno e più ore di lavoro per portare a casa i frutti migliori. L’evoluzione dell’azienda famigliare porta il figlio Giuseppe a trovare nuova sede all’azienda nel fabbricato al Ramello, Madonna di Mongardino, già territorialmente ricadente sotto il confinante comune di Vigliano.",
-  },
-  {
-    id: 5,
-    text: "La cascina era impostata come da tradizione, e necessitava di un potenziamento negli spazi per la cantina e il deposito degli attrezzi meccanici e dei trattori e per questo ha provveduto Giuseppe affrontando un nuovo impegno finanziario nel 1984 con la realizzazione di una struttura contigua in cemento armato, sviluppata su tre piani... naturalmente crescono anche le vigne che raggiungono estensione di 30 giornate.",
-  },
-  {
-    id: 6,
-    text: "Lavorando e producendo di più è il turno della cantina che risulta piccola e sarà ampliata nel 2000, e comincia a farsi sentire il nuovo spirito innovativo portato da Pier Carlo che raggiunta l’età per formarsi una nuova famiglia, porta un nuovo impulso e sviluppo nel campo del vino.",
-  },
-  {
-    id: 7,
-    text: "L’azienda che prima produceva principalmente uve da vendere a privati che si facevano il vino nella propria cantina si adatta alle nuove esigenze, venendo meno gli appassionati che si producono il vino da soli e aumentando la richiesta di vino in damigiana e in bottiglia.",
-  },
-  {
-    id: 8,
-    text: "Oggi ancora sono riforniti di uve i tradizionalisti che magari vengono loro stessi ad effettuare il raccolto... Pier Carlo tuttavia ha messo in piedi una moderna attività di imbottigliamento (che significa anche raccolta, conservazione, deposito, invecchiamento) conforme alla più moderne esigenze salubri.",
-  },
-  {
-    id: 9,
-    text: "Il risultato è che la cantina torna ad essere piccola, che l’azienda si sta adattando per realizzare nuovi spazi di degustazione, che si mantiene la tradizione del modo di “fare” il vino come lo facevano i nonni pur nella modernità degli impianti e attrezzature. Vi invitiamo a verificare di persona.",
+    text: "Oggi, lo spirito innovativo di Pier Carlo guida Montarello verso il futuro. Moderni impianti d'imbottigliamento e nuovi spazi degustazione si fondono armoniosamente con la tradizione di un passato orgoglioso. Un modo di “fare” il vino immutato nel cuore, progettato per l'eccellenza moderna.",
   }
 ];
 
@@ -64,10 +44,24 @@ export const winesData = [
     image: "https://images.unsplash.com/photo-1585553616435-2dc0a54e271d?q=80&w=1974&auto=format&fit=crop"
   },
   {
+    id: 'freisa-d-asti',
+    name: "Freisa d'Asti DOC",
+    type: "Vino Rosso",
+    description: "Sentori di lampone e frutti di bosco, per un vino vivace e dalla personalità inconfondibile.",
+    image: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?q=80&w=1974&auto=format&fit=crop"
+  },
+  {
     id: 'piemonte-chardonnay',
     name: "Piemonte Chardonnay DOC",
     type: "Vino Bianco",
     description: "Un bianco elegante, delicato al palato e ricco di sentori floreali e di frutta a polpa bianca.",
-    image: "https://images.unsplash.com/photo-1559564114-ea622df14fd5?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1606859580459-00f7457223b0?q=80&w=1974&auto=format&fit=crop"
+  },
+  {
+    id: 'moscato-d-asti',
+    name: "Moscato d'Asti DOCG",
+    type: "Vino Dolce",
+    description: "Dolce e intensamente aromatico, il compagno perfetto per chiudere ogni pasto in bellezza.",
+    image: "https://images.unsplash.com/photo-1616149453763-825e1df1fb4e?q=80&w=1974&auto=format&fit=crop"
   }
 ];

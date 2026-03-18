@@ -21,7 +21,9 @@ export default function Navigation() {
 
   const links = [
     { href: '/', label: 'Home' },
+    { href: '/#storia', label: 'Chi Siamo' },
     { href: '/vini', label: 'I Vini' },
+    { href: '/#contatti', label: 'Contatti' },
   ];
 
   const isHome = pathname === '/';

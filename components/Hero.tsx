@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -18,15 +19,14 @@ export default function Hero() {
           alt="Vigneto Astigiano al tramonto" 
           className="w-full h-full object-cover"
         />
-        {/* <!-- INSERT AI IMAGE: Asti vineyard at golden hour --> */}
       </motion.div>
 
-      <div className="relative z-20 text-center px-6 mt-16 text-[#FBF9F6]">
+      <div className="relative z-20 text-center px-6 mt-16 text-brand-sand">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-amber-100"
+          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-brand-gold"
         >
           Azienda Agricola
         </motion.p>
@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="font-sans text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto text-gray-200"
+          className="font-sans text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto text-white/90"
         >
           Storia, tradizione e passione nel cuore del Monferrato dal 1968.
         </motion.p>
@@ -52,15 +52,21 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white flex flex-col items-center gap-2"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20"
       >
-        <span className="font-sans text-xs tracking-[0.2em] uppercase text-white/70">Scorri</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        <Link 
+          href="#esplora" 
+          className="flex flex-col items-center gap-3 text-white/70 hover:text-brand-gold transition-colors duration-300"
+          aria-label="Scorri verso il basso"
         >
-          <ChevronDown size={20} className="text-white/70" />
-        </motion.div>
+          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Scorri</span>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+          >
+            <ChevronDown size={24} strokeWidth={1.5} />
+          </motion.div>
+        </Link>
       </motion.div>
     </section>
   );
