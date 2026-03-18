@@ -55,11 +55,11 @@ export default function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20"
       >
         <Link 
-          href="#storia" 
+          href="#radici" 
           className="flex flex-col items-center gap-3 text-white/70 hover:text-brand-gold transition-colors duration-300"
           aria-label="Scorri verso il basso"
         >
-          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Scopri</span>
+          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">SCOPRI</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
