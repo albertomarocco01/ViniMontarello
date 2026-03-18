@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
       <motion.div 
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -21,7 +21,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-20 text-center px-6 mt-16 text-brand-sand">
+      <div className="relative z-10 text-center px-4 md:px-0 text-brand-sand">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

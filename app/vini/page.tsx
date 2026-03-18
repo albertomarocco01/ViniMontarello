@@ -3,7 +3,7 @@ import WineCard from '@/components/WineCard';
 
 export default function ViniPage() {
   return (
-    <div className="min-h-screen bg-[#E8E4D9] pt-32 pb-24 md:pt-48 md:pb-40 px-6">
+    <div className="min-h-screen bg-[#FDF2E3] pt-32 pb-24 md:pt-48 md:pb-40 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 md:mb-32">
           <p className="font-sans text-sm tracking-[0.3em] uppercase mb-4 text-brand-wine">
