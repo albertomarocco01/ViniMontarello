@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <motion.div 
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -21,12 +21,12 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-10 text-center px-4 md:px-0 text-brand-sand">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full h-full text-brand-sand">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-12 text-brand-gold"
+          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-4 md:mb-6 text-brand-gold"
         >
           Azienda Agricola
         </motion.p>
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="font-display italic font-light text-6xl md:text-8xl lg:text-9xl tracking-wide mb-8"
+          className="font-display italic font-light text-5xl md:text-8xl lg:text-9xl tracking-wide mb-4 md:mb-6"
         >
           Montarello
         </motion.h1>
@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="font-sans text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto text-white/90"
+          className="font-sans text-base md:text-xl font-light tracking-wide max-w-2xl text-white/90"
         >
           Storia, tradizione e passione nel cuore del Monferrato dal 1968.
         </motion.p>
@@ -52,7 +52,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20"
       >
         <Link 
           href="#radici" 
