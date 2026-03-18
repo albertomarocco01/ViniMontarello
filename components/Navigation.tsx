@@ -17,7 +17,7 @@ export default function Navigation() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   const links = [
     { href: '/', label: 'Home' },
@@ -43,7 +43,7 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${navClass}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl tracking-wider select-none">
+        <Link href="/" className="font-display text-3xl tracking-wider select-none">
           MONTARELLO
         </Link>
         <nav className="hidden md:flex gap-8 font-sans text-sm tracking-widest uppercase">

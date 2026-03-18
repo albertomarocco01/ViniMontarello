@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-brand-gold"
+          className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-12 text-brand-gold"
         >
           Azienda Agricola
         </motion.p>
@@ -34,7 +34,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-wide mb-8"
+          className="font-display italic font-light text-6xl md:text-8xl lg:text-9xl tracking-wide mb-8"
         >
           Montarello
         </motion.h1>
@@ -55,11 +55,11 @@ export default function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20"
       >
         <Link 
-          href="#esplora" 
+          href="#storia" 
           className="flex flex-col items-center gap-3 text-white/70 hover:text-brand-gold transition-colors duration-300"
           aria-label="Scorri verso il basso"
         >
-          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Scorri</span>
+          <span className="font-sans text-[10px] tracking-[0.3em] uppercase">Scopri</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}

@@ -36,7 +36,7 @@ export default function WineCard({ wine, index }: WineCardProps) {
       <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#8B2635] mb-3">
         {wine.type}
       </p>
-      <h3 className="font-serif text-2xl md:text-3xl text-[#2C2C2C] mb-4 tracking-wide">
+      <h3 className="font-display italic text-3xl md:text-4xl text-[#2C2C2C] mb-4 tracking-wide">
         {wine.name}
       </h3>
       <p className="font-sans text-sm font-light leading-relaxed text-[#666666] text-balance">

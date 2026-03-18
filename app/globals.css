@@ -10,6 +10,7 @@
   
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-display: var(--font-cormorant), ui-serif, Georgia, serif;
 }
 
 :root {
@@ -17,18 +18,23 @@
   --foreground: var(--color-brand-charcoal);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1A1A1D; /* Very dark charcoal */
-    --foreground: #FBF9F6; /* Off-white sand */
-  }
-}
-
 body {
   background-color: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html:has(.snap-container) {
+  scroll-snap-type: y mandatory;
+}
+
+html:has(.snap-container) footer {
+  scroll-snap-align: end;
 }
 
 .text-balance {

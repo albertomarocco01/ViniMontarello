@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Playfair_Display, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], style: ['normal', 'italic'], variable: '--font-cormorant', display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Vini Montarello | Azienda Agricola',
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans flex flex-col min-h-screen`}>
+      <body className={`${inter.variable} ${playfair.variable} ${cormorant.variable} font-sans flex flex-col min-h-screen`}>
         <Navigation />
         <main className="flex-grow">
           {children}

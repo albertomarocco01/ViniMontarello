@@ -1,25 +1,15 @@
-export const historyData = [
-  {
-    id: 1,
-    text: "Tutto ha inizio dalle radici contadine dei nonni, che per una vita intera hanno lavorato le vigne di Mongardino in piccoli appezzamenti sparsi, spinti da un instancabile amore per la terra.",
-    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop", 
-    alt: "Nonno Savino e la vigna",
+export const aboutText = {
+  chiSiamo: {
+    title: "Le Nostre Radici",
+    content: "Tutto ha inizio dalle radici contadine dei nonni. Nel 1968, il sogno prende forma: acquistano le vigne sul bricco Montarello, una gemma esposta a mezzogiorno. Oggi, lo spirito innovativo di Pier Carlo guida la tenuta verso il futuro, fondendo armoniosamente le tecnologie moderne con la fiera tradizione del passato.",
+    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop"
   },
-  {
-    id: 2,
-    text: "Nel 1968, il sogno prende forma. I nonni acquistano le vigne sul bricco “Montarello”, una gemma collinare esposta a mezzogiorno, che regala viste mozzafiato dall'appennino astigiano fino alla maestosa catena del Monte Rosa.",
-    image: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?q=80&w=2070&auto=format&fit=crop", 
-    alt: "Panorama Bricco Montarello",
-  },
-  {
-    id: 3,
-    text: "L'acquisto di 10 giornate piemontesi richiama enormi sacrifici, diventando il simbolo della dedizione della famiglia. Con pazienza e ore inesauribili di lavoro, l'azienda prospera e passa nelle mani del figlio Giuseppe, che negli anni '80 espande la tenuta a 30 giornate e rinnova la cantina.",
-  },
-  {
-    id: 4,
-    text: "Oggi, lo spirito innovativo di Pier Carlo guida Montarello verso il futuro. Moderni impianti d'imbottigliamento e nuovi spazi degustazione si fondono armoniosamente con la tradizione di un passato orgoglioso. Un modo di “fare” il vino immutato nel cuore, progettato per l'eccellenza moderna.",
+  cantina: {
+    title: "La Cantina",
+    content: "Un santuario dedicato al tempo e all'eccellenza. Nelle nostre cantine, il processo di affinamento avviene in un silenzio reverenziale, permettendo a ogni bottiglia di sviluppare la complessità e l'eleganza che contraddistinguono i vini Montarello.",
+    image: "https://images.unsplash.com/photo-1574880572852-598d9cda55d6?q=80&w=2000&auto=format&fit=crop"
   }
-];
+};
 
 export const winesData = [
   {
@@ -34,7 +24,7 @@ export const winesData = [
     name: "Grignolino d'Asti DOC",
     type: "Vino Rosso",
     description: "Tannini delicati e un colore rosso chiaro impreziosito da un bouquet fresco e speziato.",
-    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1569919659476-f308de2d9b68?q=80&w=2000&auto=format&fit=crop"
   },
   {
     id: 'monferrato-dolcetto',
@@ -48,7 +38,7 @@ export const winesData = [
     name: "Freisa d'Asti DOC",
     type: "Vino Rosso",
     description: "Sentori di lampone e frutti di bosco, per un vino vivace e dalla personalità inconfondibile.",
-    image: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?q=80&w=1974&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=2070&auto=format&fit=crop"
   },
   {
     id: 'piemonte-chardonnay',
