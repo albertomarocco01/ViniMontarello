@@ -1,63 +1,172 @@
 import Link from 'next/link';
+import { MapPin, Phone, Mail, FileText } from 'lucide-react';
+
+const NAV_LINKS = [
+  { href: '/chi-siamo', label: 'Chi siamo' },
+  { href: '/catalogo', label: 'La cantina' },
+  { href: '/catalogo/vini-rossi', label: 'I vini rossi' },
+  { href: '/catalogo/vini-bianchi', label: 'I vini bianchi' },
+  { href: '/contatti', label: 'Contatti' },
+];
 
 export default function Footer() {
   return (
-    <footer id="contatti" className="bg-[#3A131A] text-[#FBF9F6] py-12 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-12 md:gap-x-12 text-center md:text-left transition-colors">
-        
-        {/* Brand & Address */}
-        <div className="flex flex-col items-center md:items-start space-y-4">
-          <Link href="/" className="font-serif text-3xl tracking-wider select-none mb-2 hover:text-[#D4AF37] transition-colors">
-            MONTARELLO
-          </Link>
-          <p className="font-sans text-sm text-[#E2DBD3] max-w-xs leading-relaxed">
-            Azienda Agricola Montarello<br />
-            <a 
-              href="https://www.google.com/maps/place/44.835619,8.212942" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors underline underline-offset-4 decoration-[#D4AF37]/50 hover:decoration-[#D4AF37]"
+    <footer className="w-full bg-[#1C0A06] text-[#E2DBD3] border-t border-[#D4AF37]/10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+
+        {/* ── Main grid ── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start">
+
+          {/* Esplora */}
+          <div className="flex flex-col gap-4">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+              Esplora
+            </h3>
+            <nav className="flex flex-col gap-3">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-white/55 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contatti */}
+          <div className="flex flex-col gap-4">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+              Contatti
+            </h3>
+            <div className="flex flex-col gap-4">
+              <a
+                href="tel:+393470439525"
+                className="group flex items-center gap-2.5 text-xs text-white/55 hover:text-white transition-colors"
+              >
+                <Phone
+                  size={11}
+                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0"
+                />
+                347 0439525
+              </a>
+              <a
+                href="mailto:info@vinimontarello.it"
+                className="group flex items-center gap-2.5 text-xs text-white/55 hover:text-white transition-colors"
+              >
+                <Mail
+                  size={11}
+                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0"
+                />
+                info@vinimontarello.it
+              </a>
+              <a
+                href="mailto:vinimontarello@pec.it"
+                className="group flex items-start gap-2.5 text-xs text-white/55 hover:text-white transition-colors"
+              >
+                <FileText
+                  size={11}
+                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0 mt-0.5"
+                />
+                <span>
+                  vinimontarello@pec.it
+                  <span className="block text-[9px] text-white/25 tracking-[0.2em] uppercase mt-0.5">
+                    PEC
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
+            <Link
+              href="/"
+              className="font-display text-2xl tracking-[0.2em] text-[#FBF9F6] hover:text-[#D4AF37] transition-colors select-none"
             >
+              MONTARELLO
+            </Link>
+            <p className="font-sans text-xs text-white/40 leading-relaxed max-w-[200px]">
+              Azienda Agricola nel cuore<br />del Monferrato dal 1968.
+            </p>
+          </div>
+
+          {/* Dove ci troviamo + Map placeholder */}
+          <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+              Dove ci troviamo
+            </h3>
+
+            {/* Abstract map tile */}
+            <a
+              href="https://www.google.com/maps/place/44.835619,8.212942"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Apri la mappa di Vigliano d'Asti"
+              className="group relative block w-full max-w-[160px] aspect-square overflow-hidden rounded-sm"
+            >
+              {/* Vineyard gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#2C4A1E] via-[#375824]/80 to-[#1A2E10] group-hover:brightness-110 transition-all duration-400" />
+
+              {/* Map grid overlay */}
+              <svg
+                className="absolute inset-0 w-full h-full opacity-[0.12]"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <pattern id="mapgrid" width="18" height="18" patternUnits="userSpaceOnUse">
+                    <path d="M 18 0 L 0 0 0 18" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#mapgrid)" />
+              </svg>
+
+              {/* Contour lines */}
+              <svg
+                className="absolute inset-0 w-full h-full opacity-25"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M 0 55 Q 20 50 45 57 T 100 53" stroke="#D4AF37" strokeWidth="0.8" fill="none" />
+                <path d="M 0 68 Q 30 63 58 70 T 100 66" stroke="#D4AF37" strokeWidth="0.6" fill="none" />
+                <path d="M 0 80 Q 25 76 52 82 T 100 79" stroke="#D4AF37" strokeWidth="0.4" fill="none" />
+              </svg>
+
+              {/* Pin + label */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5">
+                <MapPin
+                  size={22}
+                  strokeWidth={1.5}
+                  className="text-[#D4AF37] drop-shadow-md group-hover:scale-110 transition-transform duration-300"
+                />
+                <span className="font-sans text-[8px] tracking-[0.18em] uppercase text-white/75 text-center leading-tight px-2">
+                  Vigliano<br />d&apos;Asti
+                </span>
+              </div>
+
+              {/* Hover scrim */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300" />
+            </a>
+
+            <p className="font-sans text-xs text-white/50 leading-relaxed">
               Via Braglia 19<br />
-              14040 Vigliano D'Asti (AT)
-            </a><br />
-            <span className="text-white/40 text-xs mt-2 block">Coordinate: 44.835619, 8.212942</span>
-          </p>
+              14040 Vigliano d&apos;Asti (AT)
+            </p>
+          </div>
         </div>
 
-        {/* Contact Links */}
-        <div className="flex flex-col items-center md:items-start space-y-4">
-          <h3 className="font-serif text-xl tracking-wide mb-2 text-[#D4AF37]">Contatti</h3>
-          <p className="font-sans text-sm text-[#E2DBD3] flex flex-col space-y-4">
-            <a href="tel:+390141953772" className="hover:text-white transition-colors flex items-center gap-2 group">
-              <span className="text-white/50 text-xs uppercase tracking-widest w-12 group-hover:text-[#D4AF37] transition-colors">Tel</span> 
-              0141 953772
-            </a>
-            <a href="tel:+393470439525" className="hover:text-white transition-colors flex items-center gap-2 group">
-              <span className="text-white/50 text-xs uppercase tracking-widest w-12 group-hover:text-[#D4AF37] transition-colors">Cell</span> 
-              347 0439525
-            </a>
-            <a href="mailto:cantaretto@libero.it" className="hover:text-white transition-colors flex items-center gap-2 group">
-              <span className="text-white/50 text-xs uppercase tracking-widest w-12 group-hover:text-[#D4AF37] transition-colors">Mail</span> 
-              cantaretto@libero.it
-            </a>
+        {/* ── Bottom bar ── */}
+        <div className="mt-10 pt-5 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-2">
+          <p className="font-sans text-[10px] text-white/20 tracking-wider">
+            &copy; {new Date().getFullYear()} Azienda Agricola Montarello. Tutti i diritti riservati.
           </p>
-        </div>
-
-        {/* Fiscal Info */}
-        <div className="flex flex-col items-center md:items-start space-y-4">
-          <h3 className="font-serif text-xl tracking-wide mb-2 text-[#D4AF37]">Azienda</h3>
-          <p className="font-sans text-sm text-[#E2DBD3] leading-relaxed">
+          <p className="font-sans text-[10px] text-white/15 tracking-wider">
             P. IVA 01152430052
           </p>
-          <p className="font-sans text-xs text-white/50 max-w-xs leading-relaxed mt-4">
-          </p>
         </div>
-
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-xs tracking-wider text-white/40">
-        &copy; {new Date().getFullYear()} Azienda Agricola Montarello. Tutti i diritti riservati.
       </div>
     </footer>
   );
