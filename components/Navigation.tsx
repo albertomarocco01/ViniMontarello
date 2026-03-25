@@ -40,7 +40,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-display text-3xl tracking-wider select-none [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]"
+          className="font-display text-3xl tracking-wider select-none [text-shadow:0_1px_6px_rgba(0,0,0,0.5)]"
         >
           MONTARELLO
         </Link>
@@ -53,7 +53,7 @@ export default function Navigation() {
                 <div key={link.href} className="relative group">
                   <Link
                     href={link.href}
-                    className={`flex items-center gap-1.5 transition-colors duration-300 [text-shadow:_0_1px_4px_rgba(0,0,0,0.6)] hover:text-brand-gold ${
+                    className={`flex items-center gap-1.5 transition-colors duration-300 [text-shadow:0_1px_4px_rgba(0,0,0,0.6)] hover:text-brand-gold ${
                       isActive(link.href) ? 'text-brand-gold' : ''
                     }`}
                   >
@@ -90,7 +90,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors duration-300 [text-shadow:_0_1px_4px_rgba(0,0,0,0.6)] hover:text-brand-gold ${
+                className={`transition-colors duration-300 [text-shadow:0_1px_4px_rgba(0,0,0,0.6)] hover:text-brand-gold ${
                   isActive(link.href) ? 'text-brand-gold' : ''
                 }`}
               >
@@ -102,7 +102,7 @@ export default function Navigation() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 [text-shadow:_0_1px_4px_rgba(0,0,0,0.5)]"
+          className="md:hidden p-2 [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
         >

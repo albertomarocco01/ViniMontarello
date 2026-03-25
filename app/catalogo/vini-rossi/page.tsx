@@ -17,19 +17,19 @@ export default function ViniRossiPage() {
       <div className="relative z-10 text-center max-w-2xl">
         <Link
           href="/catalogo"
-          className="inline-flex items-center gap-2 font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37]/70 hover:text-[#D4AF37] transition-colors mb-12"
+          className="inline-flex items-center gap-2 font-sans text-xs tracking-[0.3em] uppercase text-brand-gold/70 hover:text-brand-gold transition-colors mb-12"
         >
           <ArrowLeft size={14} />
           La cantina
         </Link>
 
-        <p className="font-sans text-xs tracking-[0.35em] uppercase text-[#D4AF37] mb-4">
+        <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
           Selezione
         </p>
-        <h1 className="font-display italic text-5xl md:text-7xl text-[#FBF9F6] mb-6 tracking-wide">
+        <h1 className="font-display italic text-5xl md:text-7xl text-brand-sand mb-6 tracking-wide">
           I Vini Rossi
         </h1>
-        <div className="w-16 h-px bg-[#D4AF37] mx-auto mb-8" />
+        <div className="w-16 h-px bg-brand-gold mx-auto mb-8" />
         <p className="font-sans font-light text-lg text-white/60 leading-relaxed">
           Barbera d&apos;Asti · Grignolino d&apos;Asti · Dolcetto · Freisa d&apos;Asti
         </p>

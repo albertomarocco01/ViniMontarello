@@ -9,17 +9,17 @@ export const metadata: Metadata = {
 
 export default function ContattiPage() {
   return (
-    <main className="min-h-dvh bg-[#3A131A] text-[#FBF9F6] flex flex-col items-center justify-center px-6 pt-32 pb-24">
+    <main className="min-h-dvh bg-[#3A131A] text-brand-sand flex flex-col items-center justify-center px-6 pt-32 pb-24">
 
       {/* Header */}
       <div className="text-center mb-16 md:mb-24">
-        <p className="font-sans text-xs tracking-[0.35em] uppercase text-[#D4AF37] mb-4">
+        <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
           Azienda Agricola
         </p>
         <h1 className="font-display italic text-5xl md:text-7xl lg:text-8xl mb-6 tracking-wide">
           Contatti
         </h1>
-        <div className="w-16 md:w-24 h-px bg-[#D4AF37] mx-auto" />
+        <div className="w-16 md:w-24 h-px bg-brand-gold mx-auto" />
       </div>
 
       {/* Contact grid */}
@@ -28,16 +28,16 @@ export default function ContattiPage() {
         {/* Address */}
         <div className="flex flex-col items-center md:items-start gap-5 text-center md:text-left">
           <div className="flex items-center gap-3">
-            <MapPin size={18} className="text-[#D4AF37] shrink-0" />
-            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37]">Dove siamo</h2>
+            <MapPin size={18} className="text-brand-gold shrink-0" />
+            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold">Dove siamo</h2>
           </div>
-          <div className="font-sans text-sm text-[#E2DBD3] leading-loose">
+          <div className="font-sans text-sm text-brand-accent leading-loose">
             <p className="font-light mb-1">Azienda Agricola Montarello</p>
             <a
               href="https://www.google.com/maps/place/44.835619,8.212942"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors underline underline-offset-4 decoration-[#D4AF37]/40 hover:decoration-[#D4AF37]"
+              className="hover:text-white transition-colors underline underline-offset-4 decoration-brand-gold/40 hover:decoration-brand-gold"
             >
               Via Braglia 19<br />
               14040 Vigliano D&apos;Asti (AT)
@@ -48,7 +48,7 @@ export default function ContattiPage() {
             href="https://www.google.com/maps/place/44.835619,8.212942"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-sans text-xs tracking-[0.2em] uppercase border border-[#D4AF37]/50 text-[#D4AF37] px-6 py-3 hover:bg-[#D4AF37] hover:text-black transition-all duration-400"
+            className="inline-block font-sans text-xs tracking-[0.2em] uppercase border border-brand-gold/50 text-brand-gold px-6 py-3 hover:bg-brand-gold hover:text-black transition-all duration-400"
           >
             Apri in Maps
           </a>
@@ -57,33 +57,33 @@ export default function ContattiPage() {
         {/* Phone & Email */}
         <div className="flex flex-col items-center md:items-start gap-5 text-center md:text-left">
           <div className="flex items-center gap-3">
-            <Phone size={18} className="text-[#D4AF37] shrink-0" />
-            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37]">Telefono</h2>
+            <Phone size={18} className="text-brand-gold shrink-0" />
+            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold">Telefono</h2>
           </div>
-          <div className="font-sans text-sm text-[#E2DBD3] flex flex-col gap-4 leading-loose">
+          <div className="font-sans text-sm text-brand-accent flex flex-col gap-4 leading-loose">
             <a
               href="tel:+390141953772"
               className="group flex items-center gap-3 hover:text-white transition-colors"
             >
-              <span className="text-white/40 text-xs uppercase tracking-widest w-10 group-hover:text-[#D4AF37] transition-colors">Tel</span>
+              <span className="text-white/40 text-xs uppercase tracking-widest w-10 group-hover:text-brand-gold transition-colors">Tel</span>
               0141 953772
             </a>
             <a
               href="tel:+393470439525"
               className="group flex items-center gap-3 hover:text-white transition-colors"
             >
-              <span className="text-white/40 text-xs uppercase tracking-widest w-10 group-hover:text-[#D4AF37] transition-colors">Cell</span>
+              <span className="text-white/40 text-xs uppercase tracking-widest w-10 group-hover:text-brand-gold transition-colors">Cell</span>
               347 0439525
             </a>
           </div>
 
           <div className="flex items-center gap-3 mt-4">
-            <Mail size={18} className="text-[#D4AF37] shrink-0" />
-            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37]">Email</h2>
+            <Mail size={18} className="text-brand-gold shrink-0" />
+            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold">Email</h2>
           </div>
           <a
             href="mailto:cantaretto@libero.it"
-            className="font-sans text-sm text-[#E2DBD3] hover:text-white transition-colors underline underline-offset-4 decoration-[#D4AF37]/40 hover:decoration-[#D4AF37]"
+            className="font-sans text-sm text-brand-accent hover:text-white transition-colors underline underline-offset-4 decoration-brand-gold/40 hover:decoration-brand-gold"
           >
             cantaretto@libero.it
           </a>
@@ -92,16 +92,16 @@ export default function ContattiPage() {
         {/* Fiscal & Brand */}
         <div className="flex flex-col items-center md:items-start gap-5 text-center md:text-left">
           <div className="flex items-center gap-3">
-            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37]">Azienda</h2>
+            <h2 className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold">Azienda</h2>
           </div>
-          <div className="font-sans text-sm text-[#E2DBD3] leading-loose">
+          <div className="font-sans text-sm text-brand-accent leading-loose">
             <p className="font-light mb-1">Azienda Agricola Montarello</p>
             <p className="text-white/50 text-xs">P. IVA 01152430052</p>
           </div>
           <div className="mt-4 border-t border-white/10 pt-6 w-full">
             <Link
               href="/"
-              className="font-display text-2xl tracking-wider text-white/40 hover:text-[#D4AF37] transition-colors select-none"
+              className="font-display text-2xl tracking-wider text-white/40 hover:text-brand-gold transition-colors select-none"
             >
               MONTARELLO
             </Link>

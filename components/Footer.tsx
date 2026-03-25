@@ -11,7 +11,7 @@ const NAV_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#1C0A06] text-[#E2DBD3] border-t border-[#D4AF37]/10 overflow-hidden">
+    <footer className="w-full bg-[#1C0A06] text-brand-accent border-t border-brand-gold/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
 
         {/* ── Main grid ── */}
@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* Esplora */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-brand-gold">
               Esplora
             </h3>
             <nav className="flex flex-col gap-3">
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Contatti */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-brand-gold">
               Contatti
             </h3>
             <div className="flex flex-col gap-4">
@@ -47,7 +47,7 @@ export default function Footer() {
               >
                 <Phone
                   size={11}
-                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0"
+                  className="text-brand-gold/60 group-hover:text-brand-gold transition-colors shrink-0"
                 />
                 347 0439525
               </a>
@@ -57,7 +57,7 @@ export default function Footer() {
               >
                 <Mail
                   size={11}
-                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0"
+                  className="text-brand-gold/60 group-hover:text-brand-gold transition-colors shrink-0"
                 />
                 info@vinimontarello.it
               </a>
@@ -67,7 +67,7 @@ export default function Footer() {
               >
                 <FileText
                   size={11}
-                  className="text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0 mt-0.5"
+                  className="text-brand-gold/60 group-hover:text-brand-gold transition-colors shrink-0 mt-0.5"
                 />
                 <span>
                   vinimontarello@pec.it
@@ -83,7 +83,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
             <Link
               href="/"
-              className="font-display text-2xl tracking-[0.2em] text-[#FBF9F6] hover:text-[#D4AF37] transition-colors select-none"
+              className="font-display text-2xl tracking-[0.2em] text-brand-sand hover:text-brand-gold transition-colors select-none"
             >
               MONTARELLO
             </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
 
           {/* Dove ci troviamo + Map placeholder */}
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
-            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#D4AF37]">
+            <h3 className="font-sans text-[10px] tracking-[0.3em] uppercase text-brand-gold">
               Dove ci troviamo
             </h3>
 
@@ -107,7 +107,7 @@ export default function Footer() {
               className="group relative block w-full max-w-[160px] aspect-square overflow-hidden rounded-sm"
             >
               {/* Vineyard gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#2C4A1E] via-[#375824]/80 to-[#1A2E10] group-hover:brightness-110 transition-all duration-400" />
+              <div className="absolute inset-0 bg-linear-to-br from-[#2C4A1E] via-[#375824]/80 to-[#1A2E10] group-hover:brightness-110 transition-all duration-400" />
 
               {/* Map grid overlay */}
               <svg
@@ -140,7 +140,7 @@ export default function Footer() {
                 <MapPin
                   size={22}
                   strokeWidth={1.5}
-                  className="text-[#D4AF37] drop-shadow-md group-hover:scale-110 transition-transform duration-300"
+                  className="text-brand-gold drop-shadow-md group-hover:scale-110 transition-transform duration-300"
                 />
                 <span className="font-sans text-[8px] tracking-[0.18em] uppercase text-white/75 text-center leading-tight px-2">
                   Vigliano<br />d&apos;Asti
@@ -159,7 +159,7 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div className="mt-10 pt-5 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="mt-10 pt-5 border-t border-white/6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="font-sans text-[10px] text-white/20 tracking-wider">
             &copy; {new Date().getFullYear()} Azienda Agricola Montarello. Tutti i diritti riservati.
           </p>

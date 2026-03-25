@@ -26,17 +26,17 @@ const categories = [
 
 export default function CatalogoPage() {
   return (
-    <main className="min-h-dvh bg-[#1C1008] text-[#FBF9F6] flex flex-col items-center justify-center px-6 pt-24 pb-16">
+    <main className="min-h-dvh bg-[#1C1008] text-brand-sand flex flex-col items-center justify-center px-6 pt-24 pb-16">
 
       {/* Header */}
       <div className="text-center mb-12 md:mb-20">
-        <p className="font-sans text-xs tracking-[0.35em] uppercase text-[#D4AF37] mb-4">
+        <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
           La nostra selezione
         </p>
         <h1 className="font-display italic text-5xl md:text-7xl mb-6 tracking-wide">
           La Cantina
         </h1>
-        <div className="w-16 md:w-24 h-px bg-[#D4AF37] mx-auto mb-6" />
+        <div className="w-16 md:w-24 h-px bg-brand-gold mx-auto mb-6" />
         <p className="font-sans font-light text-base md:text-lg text-white/60 max-w-md mx-auto leading-relaxed">
           Scegli la tua selezione e scopri ogni vino nel dettaglio.
         </p>
@@ -48,7 +48,7 @@ export default function CatalogoPage() {
           <Link
             key={cat.href}
             href={cat.href}
-            className="group relative overflow-hidden aspect-[4/3] md:aspect-[3/4] flex flex-col justify-end"
+            className="group relative overflow-hidden aspect-4/3 md:aspect-3/4 flex flex-col justify-end"
           >
             {/* Background image */}
             <img
@@ -57,17 +57,17 @@ export default function CatalogoPage() {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t ${cat.accent} to-black/80`} />
+            <div className={`absolute inset-0 bg-linear-to-t ${cat.accent} to-black/80`} />
 
             {/* Content */}
             <div className="relative z-10 p-8 md:p-10">
-              <p className="font-sans text-xs tracking-[0.3em] uppercase text-[#D4AF37] mb-2 opacity-80">
+              <p className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold mb-2 opacity-80">
                 {cat.sub}
               </p>
-              <h2 className="font-display italic text-3xl md:text-4xl text-white mb-4 group-hover:text-[#D4AF37] transition-colors duration-300">
+              <h2 className="font-display italic text-3xl md:text-4xl text-white mb-4 group-hover:text-brand-gold transition-colors duration-300">
                 {cat.label}
               </h2>
-              <div className="flex items-center gap-3 text-white/60 group-hover:text-[#D4AF37] transition-colors duration-300">
+              <div className="flex items-center gap-3 text-white/60 group-hover:text-brand-gold transition-colors duration-300">
                 <span className="font-sans text-xs tracking-[0.2em] uppercase">Scopri</span>
                 <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-300" />
               </div>
