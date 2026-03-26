@@ -1,7 +1,7 @@
 export const aboutText = {
   chiSiamo: {
     title: "Le Nostre Radici",
-    content: "Tutto ha inizio dalle radici contadine dei nonni. Nel 1968, il sogno prende forma: acquistano le vigne sul bricco Montarello, una gemma esposta a mezzogiorno. Oggi, lo spirito innovativo di Pier Carlo guida la tenuta verso il futuro, fondendo armoniosamente le tecnologie moderne con la fiera tradizione del passato.",
+    content: "Tutto ha inizio nel 1968 tra le vigne del Bricco Montarello, un balcone naturale incorniciato dalle Alpi. Oggi, l’esperienza del passato si fonde con una visione moderna: trasformiamo il frutto del nostro lavoro in vini autentici, pensati per chi, come noi, ama la qualità e la pura tradizione astigiana.",
     image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop"
   },
   cantina: {

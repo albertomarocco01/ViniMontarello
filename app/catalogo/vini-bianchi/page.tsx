@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ViniBianchiPage() {
   return (
     <main
-      className="min-h-dvh flex flex-col items-center justify-center px-6 pt-32 pb-24 relative bg-[url('https://images.unsplash.com/photo-1606859580459-00f7457223b0?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center"
+      className="min-h-dvh flex flex-col items-center justify-center px-6 pt-32 pb-24 relative bg-[url('https://plus.unsplash.com/premium_photo-1676590905367-12ff693f0afe?q=80&w=1224&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-black/60" />
 
@@ -50,7 +50,7 @@ export default function ViniBianchiPage() {
           </span>
           <span className="block w-0 group-hover:w-full h-px bg-brand-gold/60 transition-all duration-500 ease-in-out" />
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold/50 group-hover:text-brand-gold transition-colors duration-300">
-            Scopri i Vini Rossi e Rosati →
+            ← Scopri i Vini Rossi e Rosati
           </span>
         </Link>
       </div>
