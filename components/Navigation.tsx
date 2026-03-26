@@ -6,19 +6,53 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const NAV_LINKS = [
+const VineE = () => (
+  <span className="inline-block mx-1.5 align-middle transform -translate-y-px">
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="text-brand-gold/90"
+    >
+      <path d="M16 10c0-3.3-2.7-6-6-6-3.3 0-6 2.7-6 6s2.7 6 6 6c1.7 0 3.3-.7 4.5-1.9L20 19" />
+      <path d="M4 10h12" />
+      <path d="M18 5.5l1.5-1.5" opacity="0.6" strokeWidth="1" />
+      <circle cx="19.5" cy="4" r="0.8" fill="currentColor" opacity="0.5" />
+    </svg>
+  </span>
+);
+
+interface NavLink {
+  href: string;
+  label: React.ReactNode;
+  children?: { href: string; label: React.ReactNode }[];
+}
+
+const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/chi-siamo', label: 'Chi siamo' },
   {
     href: '/catalogo',
     label: 'La nostra cantina',
     children: [
-      { href: '/catalogo/vini-rossi', label: 'Vini Rossi e Rosati' },
+      {
+        href: '/catalogo/vini-rossi',
+        label: (
+          <>
+            Vini Rossi <VineE /> Rosati
+          </>
+        ),
+      },
       { href: '/catalogo/vini-bianchi', label: 'Vini Bianchi' },
     ],
   },
   { href: '/contatti', label: 'Contatti' },
-] as const;
+];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +82,7 @@ export default function Navigation() {
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-8 font-sans text-sm tracking-widest uppercase items-center">
           {NAV_LINKS.map((link) => {
-            if ('children' in link) {
+            if (link.children) {
               return (
                 <div key={link.href} className="relative group">
                   <Link
@@ -121,7 +155,7 @@ export default function Navigation() {
           >
             <nav className="flex flex-col px-6 py-8 gap-5 font-sans text-sm tracking-widest uppercase items-center">
               {NAV_LINKS.map((link) => {
-                if ('children' in link) {
+                if (link.children) {
                   return (
                     <div key={link.href} className="flex flex-col items-center gap-3 w-full">
                       <div className="flex items-center gap-2">
