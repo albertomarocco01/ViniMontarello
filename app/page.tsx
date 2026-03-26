@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div
       ref={scrollContainerRef}
-      className="h-dvh overflow-y-auto overflow-x-hidden overscroll-y-contain snap-y snap-mandatory scroll-smooth bg-[#FFF8E6] text-[#4B5749] will-change-scroll"
+      className="h-dvh overflow-y-auto overflow-x-hidden overscroll-y-contain snap-y snap-mandatory scroll-smooth bg-[#FFF8E6] text-[#4B5749]"
     >
       {/* ── Slide 1: Hero ── */}
       <section className="h-dvh snap-start snap-always relative flex items-center justify-center overflow-hidden">
@@ -98,7 +98,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: SLIDE_EASE }}
-          viewport={{ root: scrollContainerRef, once: true, amount: 0.4 }}
+          viewport={{ root: scrollContainerRef, once: false, amount: 0.25 }}
           className="max-w-4xl w-full mx-auto text-center z-10"
         >
           <h2 className="font-display italic text-4xl md:text-6xl lg:text-7xl text-brand-sand mb-6 md:mb-8 drop-shadow-lg">
@@ -128,7 +128,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: SLIDE_EASE }}
-          viewport={{ root: scrollContainerRef, once: true, amount: 0.4 }}
+          viewport={{ root: scrollContainerRef, once: false, amount: 0.25 }}
           className="max-w-3xl mx-auto text-center z-10"
         >
           <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase mb-4 text-brand-gold drop-shadow">

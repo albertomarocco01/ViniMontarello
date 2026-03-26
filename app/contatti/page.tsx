@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Grape } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contatti | Vini Montarello',
@@ -55,7 +55,7 @@ export default function ContattiPage() {
         {/* Phone & Email Card */}
         <div className="group relative flex flex-col items-center md:items-start text-center md:text-left bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
           <Phone size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-6 group-hover:scale-110 transition-transform duration-500" />
-          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Recapiti</h2>
+          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Telefono</h2>
           <div className="font-sans text-base text-brand-accent flex flex-col gap-6 leading-relaxed w-full">
             <a
               href="tel:+390141953772"
@@ -85,17 +85,17 @@ export default function ContattiPage() {
         </div>
 
         {/* Fiscal & Brand Card */}
-        <div className="group relative flex flex-col items-center text-center bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30 justify-between">
+        <div className="group relative flex flex-col items-center text-center bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
           <div className="flex flex-col items-center w-full">
-            <div className="w-8 h-px bg-brand-gold/50 mb-8" />
+            <Grape size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-6 group-hover:scale-110 transition-transform duration-500" />
             <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Azienda</h2>
             <div className="font-sans text-base text-brand-accent leading-loose">
               <p className="font-light mb-2 text-white/90">Azienda Agricola Montarello</p>
               <p className="text-brand-gold/60 font-sans tracking-widest text-sm">P. IVA 01152430052</p>
             </div>
           </div>
-          
-          <div className="mt-16 pt-10 border-t border-brand-gold/10 w-full flex flex-col items-center">
+
+          <div className="mt-12 pt-8 border-t border-brand-gold/10 w-full flex flex-col items-center">
             <Link
               href="/"
               className="font-display text-3xl tracking-widest text-[#FFF8E6]/80 hover:text-brand-gold transition-colors select-none"

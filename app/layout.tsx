@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="it" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={`${inter.variable} ${playfair.variable} ${cormorant.variable} font-sans flex flex-col min-h-screen`}>
         <Navigation />
-        <main className="grow">
+        <main className="grow overflow-hidden">
           <PageTransition>
             {children}
           </PageTransition>

@@ -22,7 +22,7 @@ export default function WineCard({ wine, index }: WineCardProps) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group relative flex flex-col items-center text-center max-w-sm mx-auto w-full"
     >
-      <div className="w-full aspect-[3/4] overflow-hidden bg-[#E2DBD3] mb-8 relative">
+      <div className="w-full aspect-3/4 overflow-hidden bg-brand-accent mb-8 relative">
         <motion.img 
           src={wine.image}
           alt={wine.name}
@@ -33,17 +33,17 @@ export default function WineCard({ wine, index }: WineCardProps) {
         <div className="absolute inset-4 border border-white/0 group-hover:border-white/30 transition-colors duration-500 z-10 pointer-events-none" />
       </div>
 
-      <p className="font-sans text-xs tracking-[0.2em] uppercase text-[#8B2635] mb-3">
+      <p className="font-sans text-xs tracking-[0.2em] uppercase text-brand-wine mb-3">
         {wine.type}
       </p>
-      <h3 className="font-display italic text-3xl md:text-4xl text-[#2C2C2C] mb-4 tracking-wide">
+      <h3 className="font-display italic text-3xl md:text-4xl text-brand-charcoal mb-4 tracking-wide">
         {wine.name}
       </h3>
       <p className="font-sans text-sm font-light leading-relaxed text-[#666666] text-balance">
         {wine.description}
       </p>
       
-      <div className="mt-8 h-[1px] w-12 bg-[#D4AF37] group-hover:w-24 transition-all duration-500" />
+      <div className="mt-8 h-px w-12 bg-brand-gold group-hover:w-24 transition-all duration-500" />
     </motion.div>
   );
 }
