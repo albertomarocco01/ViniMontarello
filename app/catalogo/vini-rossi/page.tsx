@@ -1,51 +1,81 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
+import { redWines } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'I Vini Rossi | Vini Montarello',
-  description: 'I vini rossi dell\'Azienda Agricola Montarello: Barbera d\'Asti, Grignolino, Dolcetto e Freisa.',
+  title: 'I Vini Rossi e Rosati | Vini Montarello',
+  description: "I vini rossi e rosati dell'Azienda Agricola Montarello: Barbera d'Asti, Bonarda, Dolcetto, Grignolino e Rosato.",
 };
 
 export default function ViniRossiPage() {
   return (
-    <main
-      className="min-h-dvh flex flex-col items-center justify-center px-6 pt-32 pb-24 relative bg-[url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center"
-    >
-      <div className="absolute inset-0 bg-black/70" />
+    <main className="min-h-dvh bg-[#FFF8E6] text-brand-charcoal">
 
-      <div className="relative z-10 text-center max-w-2xl">
-        <Link
-          href="/catalogo"
-          className="inline-flex items-center gap-2 font-sans text-xs tracking-[0.3em] uppercase text-brand-gold/70 hover:text-brand-gold transition-colors mb-12"
-        >
-          <ArrowLeft size={14} />
-          La cantina
-        </Link>
-
-        <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
-          Selezione
-        </p>
-        <h1 className="font-display italic text-5xl md:text-7xl text-brand-sand mb-6 tracking-wide">
-          I Vini Rossi
-        </h1>
-        <div className="w-16 h-px bg-brand-gold mx-auto mb-8" />
-        <p className="font-sans font-light text-lg text-white/60 leading-relaxed">
-          Barbera d&apos;Asti · Grignolino d&apos;Asti · Dolcetto · Freisa d&apos;Asti
-        </p>
-        <p className="font-sans text-sm text-white/40 mt-8">
-          Pagina in costruzione — le schede vino arrivano presto.
-        </p>
+      {/* ── Hero header ── */}
+      <div className="relative h-64 md:h-80 bg-[url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 px-6 text-center">
+          <Link
+            href="/catalogo"
+            className="inline-flex items-center gap-2 font-sans text-xs tracking-[0.3em] uppercase text-brand-gold/70 hover:text-brand-gold transition-colors mb-6"
+          >
+            <ArrowLeft size={14} />
+            La cantina
+          </Link>
+          <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-3">
+            Selezione
+          </p>
+          <h1 className="font-display italic text-4xl md:text-6xl text-brand-sand tracking-wide">
+            I Vini Rossi e Rosati
+          </h1>
+          <div className="w-12 h-px bg-brand-gold mx-auto mt-5" />
+        </div>
       </div>
 
-      {/* Cross-link CTA */}
-      <div className="relative z-10 mt-20 pb-4 flex flex-col items-center">
+      {/* ── Grid ── */}
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {redWines.map((wine) => (
+            <Link
+              key={wine.id}
+              href={`/catalogo/vini-rossi/${wine.slug}`}
+              className={`group block${wine.id === 7 ? ' sm:col-start-1 lg:col-start-2' : ''}`}
+            >
+              {/* Image frame */}
+              <div className="relative aspect-3/4 overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                <Image
+                  src={wine.imageUrl}
+                  alt={wine.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+                {/* Subtle gradient veil at bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/50 to-transparent" />
+              </div>
+
+              {/* Name */}
+              <div className="mt-4 text-center px-2">
+                <div className="w-6 h-px bg-brand-gold/50 mx-auto mb-3 transition-all duration-300 group-hover:w-10 group-hover:bg-brand-gold" />
+                <h2 className="font-display italic text-xl text-brand-charcoal tracking-wide leading-snug group-hover:text-brand-gold transition-colors duration-300">
+                  {wine.name}
+                </h2>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Cross-link CTA ── */}
+      <div className="flex flex-col items-center pb-20 px-6">
         <div className="w-px h-12 bg-brand-gold/30 mb-8" />
         <Link
           href="/catalogo/vini-bianchi"
           className="group inline-flex flex-col items-center gap-3 text-center"
         >
-          <span className="font-display italic text-xl md:text-2xl text-white/50 group-hover:text-brand-sand transition-colors duration-500 tracking-wide">
+          <span className="font-display italic text-xl md:text-2xl text-brand-charcoal/50 group-hover:text-brand-charcoal transition-colors duration-500 tracking-wide">
             E se invece volessi del Bianco&hellip;
           </span>
           <span className="block w-0 group-hover:w-full h-px bg-brand-gold/60 transition-all duration-500 ease-in-out" />
@@ -54,6 +84,7 @@ export default function ViniRossiPage() {
           </span>
         </Link>
       </div>
+
     </main>
   );
 }

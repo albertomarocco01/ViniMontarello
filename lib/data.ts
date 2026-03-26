@@ -1,3 +1,63 @@
+export const redWines = [
+  {
+    id: 1,
+    name: "Barbera d'Asti DOCG",
+    slug: 'barbera-d-asti-docg',
+    imageUrl: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 2,
+    name: 'Barbera del Monferrato DOC',
+    slug: 'barbera-del-monferrato-doc',
+    imageUrl: 'https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 3,
+    name: 'Piemonte Bonarda DOC',
+    slug: 'piemonte-bonarda-doc',
+    imageUrl: 'https://images.unsplash.com/photo-1594986138018-cb0b6c2609d2?q=80&w=687&auto=format&fit=crop',
+  },
+  {
+    id: 4,
+    name: 'Monferrato Dolcetto DOC',
+    slug: 'monferrato-dolcetto-doc',
+    imageUrl: 'https://images.unsplash.com/photo-1585553616435-2dc0a54e271d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 5,
+    name: "Grignolino d'Asti DOC",
+    slug: 'grignolino-d-asti-doc',
+    imageUrl: 'https://images.unsplash.com/photo-1606767351797-1664b860ae5a?q=80&w=687&auto=format&fit=crop',
+  },
+  {
+    id: 6,
+    name: 'Monferrato Rosso',
+    slug: 'monferrato-rosso',
+    imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 7,
+    name: 'Vino Rosato',
+    slug: 'vino-rosato',
+    imageUrl: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=80&w=687&auto=format&fit=crop',
+  },
+];
+
+export const whiteWines = [
+  {
+    id: 1,
+    name: 'Vino Chardonnay',
+    slug: 'vino-chardonnay',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1719997500757-c536c7cf8f48?q=80&w=736&auto=format&fit=crop',
+  },
+  {
+    id: 2,
+    name: 'Piemonte Chardonnay DOC',
+    slug: 'piemonte-chardonnay-doc',
+    imageUrl: 'https://images.unsplash.com/photo-1606767208159-1a5fb0a87841?q=80&w=687&auto=format&fit=crop',
+  },
+];
+
 export const aboutText = {
   chiSiamo: {
     title: "Le Nostre Radici",
