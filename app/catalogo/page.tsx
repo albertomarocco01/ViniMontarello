@@ -11,14 +11,14 @@ const categories = [
   {
     href: '/catalogo/vini-rossi',
     label: 'I Vini Rossi',
-    sub: 'Barbera · Grignolino · Dolcetto · Freisa',
+    sub: "Barbera · Bonarda · Dolcetto · Grignolino · Rosato",
     image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80',
     accent: 'from-[#8B2635]/60',
   },
   {
     href: '/catalogo/vini-bianchi',
     label: 'I Vini Bianchi',
-    sub: 'Chardonnay · Moscato d\'Asti',
+    sub: 'Chardonnay · Piemonte Chardonnay DOC',
     image: 'https://images.unsplash.com/photo-1597905722448-a1df7c00000a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     accent: 'from-[#4B5749]/60',
   },
@@ -26,7 +26,7 @@ const categories = [
 
 export default function CatalogoPage() {
   return (
-    <main className="min-h-dvh bg-[#1C1008] text-brand-sand flex flex-col items-center justify-center px-6 pt-24 pb-16">
+    <main className="min-h-dvh bg-[#1C1008] text-brand-sand flex flex-col items-center justify-center px-6 pt-40 pb-16">
 
       {/* Header */}
       <div className="text-center mb-12 md:mb-20">

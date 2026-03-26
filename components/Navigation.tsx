@@ -44,7 +44,7 @@ const NAV_LINKS: NavLink[] = [
         href: '/catalogo/vini-rossi',
         label: (
           <>
-            Vini Rossi <VineE /> Rosati
+            Vini Rossi e Rosati
           </>
         ),
       },
