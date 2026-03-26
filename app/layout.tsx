@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import FooterWrapper from '@/components/FooterWrapper';
+import PageTransition from '@/components/PageTransition';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} ${cormorant.variable} font-sans flex flex-col min-h-screen`}>
         <Navigation />
         <main className="grow">
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </main>
         <FooterWrapper />
       </body>

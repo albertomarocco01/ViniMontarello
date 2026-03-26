@@ -13,8 +13,8 @@ const NAV_LINKS = [
     href: '/catalogo',
     label: 'La nostra cantina',
     children: [
-      { href: '/catalogo/vini-rossi', label: 'I vini rossi' },
-      { href: '/catalogo/vini-bianchi', label: 'I vini bianchi' },
+      { href: '/catalogo/vini-rossi', label: 'Vini Rossi e Rosati' },
+      { href: '/catalogo/vini-bianchi', label: 'Vini Bianchi' },
     ],
   },
   { href: '/contatti', label: 'Contatti' },

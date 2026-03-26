@@ -37,6 +37,23 @@ export default function ViniRossiPage() {
           Pagina in costruzione — le schede vino arrivano presto.
         </p>
       </div>
+
+      {/* Cross-link CTA */}
+      <div className="relative z-10 mt-20 pb-4 flex flex-col items-center">
+        <div className="w-px h-12 bg-brand-gold/30 mb-8" />
+        <Link
+          href="/catalogo/vini-bianchi"
+          className="group inline-flex flex-col items-center gap-3 text-center"
+        >
+          <span className="font-display italic text-xl md:text-2xl text-white/50 group-hover:text-brand-sand transition-colors duration-500 tracking-wide">
+            E se invece volessi del Bianco&hellip;
+          </span>
+          <span className="block w-0 group-hover:w-full h-px bg-brand-gold/60 transition-all duration-500 ease-in-out" />
+          <span className="font-sans text-xs tracking-[0.3em] uppercase text-brand-gold/50 group-hover:text-brand-gold transition-colors duration-300">
+            Scopri i Vini Bianchi →
+          </span>
+        </Link>
+      </div>
     </main>
   );
 }

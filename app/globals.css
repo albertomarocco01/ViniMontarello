@@ -33,3 +33,9 @@ body {
   background-color: var(--color-brand-wine);
   color: white;
 }
+
+/* Promote snap sections to their own compositing layer to reduce scroll jank */
+.snap-start,
+.snap-end {
+  contain: layout style paint;
+}

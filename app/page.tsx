@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div
       ref={scrollContainerRef}
-      className="h-dvh overflow-y-auto overflow-x-hidden overscroll-y-contain snap-y snap-mandatory scroll-smooth bg-[#FFF8E6] text-[#4B5749]"
+      className="h-dvh overflow-y-auto overflow-x-hidden overscroll-y-contain snap-y snap-mandatory scroll-smooth bg-[#FFF8E6] text-[#4B5749] will-change-scroll"
     >
       {/* ── Slide 1: Hero ── */}
       <section className="h-dvh snap-start snap-always relative flex items-center justify-center overflow-hidden">
