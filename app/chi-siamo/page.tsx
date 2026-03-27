@@ -20,7 +20,7 @@ export default function ChiSiamoPage() {
       <section className="h-dvh snap-start snap-always flex flex-col md:flex-row">
 
         {/* Text half */}
-        <div className="flex-1 flex flex-col justify-center px-10 pt-28 pb-16 md:pt-0 md:px-16 lg:px-20 bg-[#FFF8E6] relative overflow-hidden">
+        <div className="flex-1 flex flex-col justify-center px-10 py-16 md:px-16 lg:px-20 bg-[#FFF8E6] relative overflow-hidden">
           {/* Decorative watermark year */}
           <span
             aria-hidden="true"
