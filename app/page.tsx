@@ -4,6 +4,7 @@ import { useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { aboutText } from '@/lib/data';
 import Footer from '@/components/Footer';
 
@@ -31,10 +32,13 @@ export default function Home() {
           className="absolute inset-0 z-0"
         >
           <div className="absolute inset-0 bg-black/40 z-10" />
-          <img
-            src="https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?q=80&w=2070&auto=format&fit=crop"
+          <Image
+            src="/images/SfondoHome.png"
             alt="Vigneto Astigiano al tramonto"
-            className="w-full h-full object-cover"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            priority
+            quality={90}
           />
         </motion.div>
 
@@ -121,8 +125,17 @@ export default function Home() {
       {/* ── Slide 3: La nostra selezione / I nostri vini ── */}
       <section
         id="esplora"
-        className="h-dvh snap-start snap-always relative flex flex-col items-center justify-center bg-[url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center px-6"
+        className="h-dvh snap-start snap-always relative flex flex-col items-center justify-center px-6 overflow-hidden"
       >
+        <div className="absolute inset-[-12%]">
+          <Image
+            src="/images/Uva.jpeg"
+            alt="Grappoli d'uva nel vigneto Montarello"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            quality={85}
+          />
+        </div>
         <div className="absolute inset-0 bg-black/65 z-0" />
         <motion.div
           initial={{ opacity: 0, y: 32 }}
