@@ -42,12 +42,12 @@ export default function Home() {
           />
         </motion.div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 w-full h-full text-brand-sand">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 w-full pt-16 md:pt-0 text-brand-sand">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-4 md:mb-6 text-brand-gold"
+            className="font-sans text-xs md:text-base tracking-[0.3em] uppercase mb-3 md:mb-6 text-brand-gold"
           >
             Azienda Agricola
           </motion.p>
@@ -55,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8, ease: SLIDE_EASE }}
-            className="font-display italic font-light text-5xl md:text-8xl lg:text-9xl tracking-wide mb-4 md:mb-6"
+            className="font-display italic font-light text-6xl md:text-8xl lg:text-9xl tracking-wide mb-3 md:mb-6"
           >
             Montarello
           </motion.h1>
@@ -63,7 +63,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="font-sans text-base md:text-xl font-light tracking-wide max-w-2xl text-white/90"
+            className="font-sans text-sm md:text-xl font-light tracking-wide max-w-2xl text-white/85 px-2"
           >
             Storia, tradizione e passione nel cuore del Monferrato dal 1968.
           </motion.p>
@@ -105,16 +105,16 @@ export default function Home() {
           viewport={{ root: scrollContainerRef, once: false, amount: 0.25 }}
           className="max-w-4xl w-full mx-auto text-center z-10"
         >
-          <h2 className="font-display italic text-4xl md:text-6xl lg:text-7xl text-brand-sand mb-6 md:mb-8 drop-shadow-lg">
+          <h2 className="font-display italic text-3xl md:text-6xl lg:text-7xl text-brand-sand mb-5 md:mb-8 drop-shadow-lg">
             {aboutText.chiSiamo.title}
           </h2>
-          <div className="w-16 md:w-24 h-px bg-brand-gold mx-auto mb-8 md:mb-10 shadow-sm" />
-          <p className="font-sans font-light text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed text-balance drop-shadow mb-10 md:mb-14">
+          <div className="w-12 md:w-24 h-px bg-brand-gold mx-auto mb-6 md:mb-10 shadow-sm" />
+          <p className="font-sans font-light text-sm md:text-xl lg:text-2xl text-white/95 leading-relaxed text-balance drop-shadow mb-8 md:mb-14 px-2">
             {aboutText.chiSiamo.content}
           </p>
           <Link
             href="/chi-siamo"
-            className="group inline-flex items-center gap-4 border border-brand-gold text-brand-gold px-8 md:px-12 py-4 md:py-5 uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-brand-gold hover:text-black transition-all duration-500"
+            className="group inline-flex items-center gap-3 md:gap-4 border border-brand-gold text-brand-gold px-6 md:px-12 py-3 md:py-5 uppercase tracking-[0.15em] md:tracking-[0.2em] text-[10px] md:text-sm hover:bg-brand-gold hover:text-black transition-all duration-500"
           >
             <span>Scopri chi siamo</span>
             <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
@@ -144,19 +144,19 @@ export default function Home() {
           viewport={{ root: scrollContainerRef, once: false, amount: 0.25 }}
           className="max-w-3xl mx-auto text-center z-10"
         >
-          <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase mb-4 text-brand-gold drop-shadow">
+          <p className="font-sans text-[10px] md:text-sm tracking-[0.3em] uppercase mb-3 md:mb-4 text-brand-gold drop-shadow">
             La Nostra Selezione
           </p>
-          <h2 className="font-display italic text-5xl md:text-7xl lg:text-8xl mb-6 md:mb-8 tracking-wide text-brand-sand drop-shadow-xl">
+          <h2 className="font-display italic text-4xl md:text-7xl lg:text-8xl mb-5 md:mb-8 tracking-wide text-brand-sand drop-shadow-xl">
             I Nostri Vini
           </h2>
-          <div className="w-24 md:w-32 h-px bg-brand-gold mx-auto mb-10 md:mb-12 shadow-sm" />
-          <p className="font-sans text-base md:text-xl lg:text-2xl font-light text-white/90 mb-10 md:mb-12 text-balance drop-shadow">
+          <div className="w-16 md:w-32 h-px bg-brand-gold mx-auto mb-7 md:mb-12 shadow-sm" />
+          <p className="font-sans text-sm md:text-xl lg:text-2xl font-light text-white/90 mb-8 md:mb-12 text-balance drop-shadow px-2">
             La perfezione di un vino nasce dalla pazienza e dalla dedizione autentica.
           </p>
           <Link
             href="/catalogo"
-            className="group inline-flex items-center gap-4 border border-brand-gold text-brand-gold px-8 md:px-12 py-4 md:py-5 uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-brand-gold hover:text-black transition-all duration-500"
+            className="group inline-flex items-center gap-3 md:gap-4 border border-brand-gold text-brand-gold px-6 md:px-12 py-3 md:py-5 uppercase tracking-[0.15em] md:tracking-[0.2em] text-[10px] md:text-sm hover:bg-brand-gold hover:text-black transition-all duration-500"
           >
             <span>Esplora il catalogo completo</span>
             <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
