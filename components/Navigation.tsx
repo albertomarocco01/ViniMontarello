@@ -6,26 +6,6 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const VineE = () => (
-  <span className="inline-block mx-1.5 align-middle transform -translate-y-px">
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="text-brand-gold/90"
-    >
-      <path d="M16 10c0-3.3-2.7-6-6-6-3.3 0-6 2.7-6 6s2.7 6 6 6c1.7 0 3.3-.7 4.5-1.9L20 19" />
-      <path d="M4 10h12" />
-      <path d="M18 5.5l1.5-1.5" opacity="0.6" strokeWidth="1" />
-      <circle cx="19.5" cy="4" r="0.8" fill="currentColor" opacity="0.5" />
-    </svg>
-  </span>
-);
 
 interface NavLink {
   href: string;

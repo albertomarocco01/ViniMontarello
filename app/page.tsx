@@ -49,7 +49,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.5 }}
             className="font-sans text-xs md:text-base tracking-[0.3em] uppercase mb-3 md:mb-6 text-brand-gold"
           >
-            Azienda Agricola
+            Società Agricola
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}

@@ -6,7 +6,7 @@ import { redWines } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'I Vini Rossi e Rosati | Vini Montarello',
-  description: "I vini rossi e rosati dell'Azienda Agricola Montarello: Barbera d'Asti, Bonarda, Dolcetto, Grignolino e Rosato.",
+  description: "I vini rossi e rosati della Società Agricola Montarello: Barbera d'Asti, Bonarda, Dolcetto, Grignolino e Rosato.",
 };
 
 export default function ViniRossiPage() {
@@ -14,7 +14,14 @@ export default function ViniRossiPage() {
     <main className="min-h-dvh bg-[#FFF8E6] text-brand-charcoal">
 
       {/* ── Hero header ── */}
-      <div className="relative h-64 md:h-80 bg-[url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center">
+      <div className="relative h-64 md:h-80 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80"
+          alt="Vini Rossi e Rosati"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/65" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 px-6 text-center">
           <Link

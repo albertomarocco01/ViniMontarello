@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -51,10 +52,12 @@ export default function CatalogoPage() {
             className="group relative overflow-hidden aspect-4/3 md:aspect-3/4 flex flex-col justify-end"
           >
             {/* Background image */}
-            <img
+            <Image
               src={cat.image}
               alt={cat.label}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Gradient overlay */}
             <div className={`absolute inset-0 bg-linear-to-t ${cat.accent} to-black/80`} />

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Grape } from 'lucide-react';
+import { MapPin, Phone, Mail, ShieldCheck, Grape } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contatti | Vini Montarello',
-  description: 'Contatta l\'Azienda Agricola Montarello. Indirizzo, telefono ed email per raggiungerci nel cuore del Monferrato.',
+  description: 'Contatta la Società Agricola Montarello. Indirizzo, telefono ed email per raggiungerci nel cuore del Monferrato.',
 };
 
 export default function ContattiPage() {
@@ -14,7 +14,7 @@ export default function ContattiPage() {
       {/* Header */}
       <div className="text-center mb-16 md:mb-24">
         <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
-            Azienda Agricola Montarello
+          Società Agricola Montarello
         </p>
         <h1 className="font-display italic text-5xl md:text-7xl lg:text-8xl mb-6 tracking-wide">
           Contatti
@@ -25,12 +25,12 @@ export default function ContattiPage() {
       {/* Contact grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-6xl w-full">
 
-        {/* Address Card */}
+        {/* ── Address Card with Map ── */}
         <div className="group relative flex flex-col items-center md:items-start text-center md:text-left bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
           <MapPin size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-6 group-hover:scale-110 transition-transform duration-500" />
-          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Dove siamo</h2>
-          <div className="font-sans text-base text-brand-accent leading-loose grow">
-            <p className="font-light mb-2 text-white/90">Azienda Agricola Montarello</p>
+          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-6">Dove siamo</h2>
+          <div className="font-sans text-base text-brand-accent leading-relaxed mb-6">
+            <p className="font-light mb-1 text-white/90">Società Agricola Montarello</p>
             <a
               href="https://www.google.com/maps/place/44.835619,8.212942"
               target="_blank"
@@ -40,62 +40,91 @@ export default function ContattiPage() {
               Via Braglia 19<br />
               14040 Vigliano D&apos;Asti (AT)
             </a>
-            <p className="font-sans text-xs tracking-widest text-white/40 mt-6 uppercase">44.835619, 8.212942</p>
           </div>
+
+          {/* Embedded Map */}
           <a
             href="https://www.google.com/maps/place/44.835619,8.212942"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-block font-sans text-xs tracking-[0.2em] uppercase border border-brand-gold/40 text-brand-gold px-8 py-4 hover:bg-brand-gold hover:text-black transition-all duration-500 w-full md:w-auto text-center"
+            className="relative w-full aspect-4/3 overflow-hidden border border-brand-gold/15 group/map block mt-auto"
           >
-            Apri in Maps
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2800!2d8.212942!3d44.835619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDUwJzA4LjIiTiA4wrAxMic0Ni42IkU!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+              className="w-full h-full border-0 pointer-events-none grayscale-40 contrast-[1.1] brightness-[0.85] sepia-20"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Posizione Montarello su Google Maps"
+            />
+            <div className="absolute inset-0 bg-brand-wine/10 group-hover/map:bg-transparent transition-colors duration-500" />
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-sans text-[9px] tracking-[0.25em] uppercase text-brand-gold/70 bg-black/60 backdrop-blur-sm px-4 py-1.5">
+              Apri in Google Maps
+            </div>
           </a>
         </div>
 
-        {/* Phone & Email Card */}
+        {/* ── Phone, Email & Pec Card ── */}
         <div className="group relative flex flex-col items-center md:items-start text-center md:text-left bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
-          <Phone size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-6 group-hover:scale-110 transition-transform duration-500" />
-          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Telefono</h2>
-          <div className="font-sans text-base text-brand-accent flex flex-col gap-6 leading-relaxed w-full">
-            <a
-              href="tel:+390141953772"
-              className="group/tel flex flex-col md:flex-row md:items-center gap-2 md:gap-4 hover:text-white transition-colors border-b border-brand-gold/10 pb-6 w-full"
-            >
-              <span className="text-brand-gold/60 text-xs uppercase tracking-[0.2em] md:w-16">Tel</span>
-              <span className="text-lg font-light tracking-wide">0141 953772</span>
-            </a>
-            <a
-              href="tel:+393470439525"
-              className="group/tel flex flex-col md:flex-row md:items-center gap-2 md:gap-4 hover:text-white transition-colors border-b border-brand-gold/10 pb-6 w-full"
-            >
-              <span className="text-brand-gold/60 text-xs uppercase tracking-[0.2em] md:w-16">Cell</span>
-              <span className="text-lg font-light tracking-wide">347 0439525</span>
-            </a>
-            
-            <div className="pt-2 flex flex-col items-center md:items-start w-full">
-               <Mail size={28} strokeWidth={1} className="text-brand-gold mb-6 mt-2 group-hover:scale-110 transition-transform duration-500" />
+
+          {/* Telefono */}
+          <Phone size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-5 group-hover:scale-110 transition-transform duration-500" />
+          <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-6">Telefono</h2>
+
+          <a
+            href="tel:+393470439525"
+            className="flex items-center gap-4 hover:text-white transition-colors w-full border-b border-brand-gold/10 pb-7 mb-7"
+          >
+            <span className="text-brand-gold/60 text-xs uppercase tracking-[0.2em] shrink-0">Cell</span>
+            <span className="text-lg font-light tracking-wide">347 0439525</span>
+          </a>
+
+          {/* Mail — inline come Cell */}
+          <div className="flex items-center gap-4 w-full border-b border-brand-gold/10 pb-7 mb-7">
+            <Mail size={20} strokeWidth={1.2} className="text-brand-gold shrink-0" />
+            <div className="flex flex-col">
+              <span className="text-brand-gold/60 text-[10px] uppercase tracking-[0.25em] mb-1">Mail</span>
               <a
                 href="mailto:cantaretto@libero.it"
-                className="font-sans text-base text-brand-accent hover:text-white transition-colors underline underline-offset-8 decoration-brand-gold/30 hover:decoration-brand-gold"
+                className="font-sans text-base text-brand-accent hover:text-white transition-colors"
               >
                 cantaretto@libero.it
               </a>
             </div>
           </div>
-        </div>
 
-        {/* Fiscal & Brand Card */}
-        <div className="group relative flex flex-col items-center text-center bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
-          <div className="flex flex-col items-center w-full">
-            <Grape size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-6 group-hover:scale-110 transition-transform duration-500" />
-            <h2 className="font-sans text-sm tracking-[0.3em] uppercase text-brand-gold mb-8">Azienda</h2>
-            <div className="font-sans text-base text-brand-accent leading-loose">
-              <p className="font-light mb-2 text-white/90">Azienda Agricola Montarello</p>
-              <p className="text-brand-gold/60 font-sans tracking-widest text-sm">P. IVA 01152430052</p>
+          {/* PEC — inline come Cell */}
+          <div className="flex items-center gap-4 w-full">
+            <ShieldCheck size={20} strokeWidth={1.2} className="text-brand-gold shrink-0" />
+            <div className="flex flex-col">
+              <span className="text-brand-gold/60 text-[10px] uppercase tracking-[0.25em] mb-1">Pec</span>
+              <a
+                href="mailto:vinimontarello@pec.it"
+                className="font-sans text-base text-brand-accent hover:text-white transition-colors"
+              >
+                vinimontarello@pec.it
+              </a>
             </div>
           </div>
+        </div>
 
-          <div className="mt-12 pt-8 border-t border-brand-gold/10 w-full flex flex-col items-center">
+        {/* ── Società Card ── */}
+        <div className="group relative flex flex-col items-center justify-between text-center bg-black/20 backdrop-blur-sm border border-brand-gold/10 p-10 md:p-12 transition-colors hover:bg-black/30 hover:border-brand-gold/30">
+
+          {/* Dati societari */}
+          <div className="flex flex-col items-center w-full">
+            <Grape size={28} strokeWidth={1} className="text-brand-gold shrink-0 mb-5 group-hover:scale-110 transition-transform duration-500" />
+
+            <h2 className="font-display italic text-2xl md:text-3xl text-brand-gold tracking-wide leading-snug mb-2">
+              Società Agricola<br />Montarello SS
+            </h2>
+            <div className="w-10 h-px bg-brand-gold/40 mx-auto my-5" />
+            <p className="font-sans text-sm text-white tracking-widest">
+              P. IVA 01152430052
+            </p>
+          </div>
+
+          {/* Brand */}
+          <div className="mt-auto pt-10 border-t border-brand-gold/10 w-full flex flex-col items-center">
             <Link
               href="/"
               className="font-display text-3xl tracking-widest text-[#FFF8E6]/80 hover:text-brand-gold transition-colors select-none"

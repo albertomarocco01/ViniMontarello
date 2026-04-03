@@ -51,15 +51,15 @@ export default function ChiSiamoPage() {
               Le Nostre Radici
             </p>
             <h2 className="font-display italic text-4xl md:text-5xl lg:text-[3.5rem] leading-tight mb-5 text-brand-sand md:text-brand-charcoal">
-              1968: Le Origini<br />sul Bricco Montarello
+              1968: Le Origini<br />al Ramello
             </h2>
             <div className="w-12 h-px bg-brand-gold mb-8" />
             <p className="font-sans font-light text-base md:text-lg text-white/85 md:text-brand-charcoal/75 leading-[1.9]">
-              La nostra storia affonda le radici in uno spartiacque naturale tra Isola e
-              Mongardino. In questa posizione privilegiata, dove lo sguardo abbraccia le
-              colline astigiane dal Monviso fino al Monte Rosa, la nostra famiglia ha
-              scelto di legare il proprio destino alla coltivazione della vite. È qui,
-              in questo paesaggio incantevole, che è nata l&apos;anima dei nostri vini.
+              La nostra storia affonda le radici al Ramello, frazione di Vigliano d&apos;Asti
+              al confine di Mongardino. In questa posizione privilegiata, dove lo sguardo
+              abbraccia le colline astigiane dal Monviso fino al Monte Rosa, la nostra
+              famiglia ha scelto di legare il proprio destino alla coltivazione della vite.
+              È qui, in questo paesaggio incantevole, che è nata l&apos;anima dei nostri vini.
             </p>
           </motion.div>
         </div>

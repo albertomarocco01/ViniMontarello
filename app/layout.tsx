@@ -10,8 +10,8 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'], style: ['normal', 'italic'], variable: '--font-cormorant', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Vini Montarello | Azienda Agricola',
-  description: 'Azienda Agricola Montarello: storia, tradizione e vini nel cuore del Monferrato.',
+  title: 'Vini Montarello | Società Agricola',
+  description: 'Società Agricola Montarello: storia, tradizione e vini nel cuore del Monferrato.',
 };
 
 export default function RootLayout({

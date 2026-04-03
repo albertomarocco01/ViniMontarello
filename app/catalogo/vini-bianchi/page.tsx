@@ -6,7 +6,7 @@ import { whiteWines } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'I Vini Bianchi | Vini Montarello',
-  description: "I vini bianchi dell'Azienda Agricola Montarello: Chardonnay e Piemonte Chardonnay DOC.",
+  description: "I vini bianchi della Società Agricola Montarello: Chardonnay e Piemonte Chardonnay DOC.",
 };
 
 export default function ViniBianchiPage() {
@@ -14,7 +14,14 @@ export default function ViniBianchiPage() {
     <main className="min-h-dvh bg-[#FFF8E6] text-brand-charcoal">
 
       {/* ── Hero header ── */}
-      <div className="relative h-64 md:h-80 bg-[url('https://plus.unsplash.com/premium_photo-1676590905367-12ff693f0afe?q=80&w=1224&auto=format&fit=crop')] bg-cover bg-center">
+      <div className="relative h-64 md:h-80 overflow-hidden">
+        <Image
+          src="https://plus.unsplash.com/premium_photo-1676590905367-12ff693f0afe?q=80&w=1224&auto=format&fit=crop"
+          alt="Vini Bianchi"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 px-6 text-center">
           <Link

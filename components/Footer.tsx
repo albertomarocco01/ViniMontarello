@@ -30,7 +30,7 @@ export default function Footer() {
               MONTARELLO
             </Link>
             <p className="font-sans text-xs text-white/40 leading-relaxed max-w-[220px]">
-              Azienda Agricola nel cuore<br />del Monferrato dal 1968.
+              Società Agricola nel cuore<br />del Monferrato dal 1968.
             </p>
           </div>
 
@@ -58,9 +58,9 @@ export default function Footer() {
                 <Phone size={11} className={ICON_CLS} />
                 347 0439525
               </a>
-              <a href="mailto:info@vinimontarello.it" className={CONTACT_LINK}>
+              <a href="mailto:cantaretto@libero.it" className={CONTACT_LINK}>
                 <Mail size={11} className={ICON_CLS} />
-                info@vinimontarello.it
+                cantaretto@libero.it
               </a>
               <a
                 href="mailto:vinimontarello@pec.it"
@@ -103,7 +103,7 @@ export default function Footer() {
         {/* ── Bottom bar ── */}
         <div className="mt-10 pt-5 border-t border-white/6 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="font-sans text-[10px] text-white/20 tracking-wider">
-            &copy; {new Date().getFullYear()} Azienda Agricola Montarello. Tutti i diritti riservati.
+            &copy; {new Date().getFullYear()} Società Agricola Montarello. Tutti i diritti riservati.
           </p>
           <p className="font-sans text-[10px] text-white/15 tracking-wider">
             P. IVA 01152430052

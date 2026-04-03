@@ -28,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-4 md:mb-6 text-brand-gold"
         >
-          Azienda Agricola
+          Società Agricola
         </motion.p>
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
