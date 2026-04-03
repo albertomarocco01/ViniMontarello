@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, ShieldCheck, Grape } from 'lucide-react';
-import MontarelloMap from './MontarelloMap';
+import MontarelloMap from './MontarelloMapClient';
 
 export const metadata: Metadata = {
   title: 'Contatti | Vini Montarello',
