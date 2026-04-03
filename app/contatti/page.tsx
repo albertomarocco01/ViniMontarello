@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, ShieldCheck, Grape } from 'lucide-react';
+import MontarelloMap from './MontarelloMap';
 
 export const metadata: Metadata = {
   title: 'Contatti | Vini Montarello',
@@ -14,7 +15,7 @@ export default function ContattiPage() {
       {/* Header */}
       <div className="text-center mb-16 md:mb-24">
         <p className="font-sans text-xs tracking-[0.35em] uppercase text-brand-gold mb-4">
-          Società Agricola Montarello
+          Società Agricola Montarello S.S.
         </p>
         <h1 className="font-display italic text-5xl md:text-7xl lg:text-8xl mb-6 tracking-wide">
           Contatti
@@ -42,15 +43,9 @@ export default function ContattiPage() {
             </a>
           </div>
 
-          {/* Embedded Map – fully interactive */}
+          {/* Embedded Map – Leaflet + Google tiles, fully interactive */}
           <div className="relative w-full aspect-4/3 overflow-hidden border border-brand-gold/15 mt-auto">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2800!2d8.212942!3d44.835619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDUwJzA4LjIiTiA4wrAxMic0Ni42IkU!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
-              className="w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Posizione Montarello su Google Maps"
-            />
+            <MontarelloMap />
           </div>
 
           {/* External link below map */}
@@ -58,9 +53,12 @@ export default function ContattiPage() {
             href="https://www.google.com/maps/place/44.835619,8.212942"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 self-center md:self-start font-sans text-xs tracking-[0.2em] uppercase text-brand-gold/60 hover:text-brand-gold transition-colors"
+            className="mt-4 self-center md:self-start font-sans text-sm tracking-[0.2em] uppercase text-brand-gold/70 hover:text-brand-gold transition-colors flex items-center gap-2"
           >
-            Apri in Google Maps ↗
+            Apri in Google Maps
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 shrink-0">
+              <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clipRule="evenodd" />
+            </svg>
           </a>
         </div>
 
