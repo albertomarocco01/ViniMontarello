@@ -42,24 +42,25 @@ export default function ContattiPage() {
             </a>
           </div>
 
-          {/* Embedded Map */}
-          <a
-            href="https://www.google.com/maps/place/44.835619,8.212942"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-full aspect-4/3 overflow-hidden border border-brand-gold/15 group/map block mt-auto"
-          >
+          {/* Embedded Map – fully interactive */}
+          <div className="relative w-full aspect-4/3 overflow-hidden border border-brand-gold/15 mt-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2800!2d8.212942!3d44.835619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDUwJzA4LjIiTiA4wrAxMic0Ni42IkU!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
-              className="w-full h-full border-0 pointer-events-none grayscale-40 contrast-[1.1] brightness-[0.85] sepia-20"
+              className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Posizione Montarello su Google Maps"
             />
-            <div className="absolute inset-0 bg-brand-wine/10 group-hover/map:bg-transparent transition-colors duration-500" />
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-sans text-[9px] tracking-[0.25em] uppercase text-brand-gold/70 bg-black/60 backdrop-blur-sm px-4 py-1.5">
-              Apri in Google Maps
-            </div>
+          </div>
+
+          {/* External link below map */}
+          <a
+            href="https://www.google.com/maps/place/44.835619,8.212942"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 self-center md:self-start font-sans text-xs tracking-[0.2em] uppercase text-brand-gold/60 hover:text-brand-gold transition-colors"
+          >
+            Apri in Google Maps ↗
           </a>
         </div>
 
